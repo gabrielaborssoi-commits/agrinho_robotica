@@ -1,169 +1,49 @@
-/* Configurações Gerais: Zera as margens padrão do navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Corpo da página: Cor de fundo leve e cor do texto */
-body {
-    background-color: #f4f9f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Container: Limita a largura do conteúdo para não ficar espalhado em telas grandes */
-.container {
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- CABEÇALHO E MENU --- */
-header {
-    background-color: #1b4d3e; /* Verde escuro */
-    color: white;
-    padding: 20px 0;
-    position: sticky; /* Faz o menu ficar fixo no topo ao rolar a página */
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 span {
-    color: #89c152; /* Verde claro para o "Forte" */
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #89c152; /* Muda de cor quando passa o mouse */
-}
-
-/* --- BANNER PRINCIPAL --- */
-.banner {
-    /* Imagem de fundo sobre agricultura com um filtro escuro para o texto aparecer */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3') no-repeat center center/cover;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Estilos adicionais para os textos longos */
+.conteudo-detalhado {
+    padding: 80px 0;
+    background-color: #ffffff;
     text-align: center;
-    color: white;
 }
 
-.banner-text h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.banner-text p {
+.texto-longo {
+    max-width: 900px;
+    margin: 20px auto 0 auto;
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    color: #444;
+    text-align: justify;
+    line-height: 1.8;
 }
 
-/* Botão do Banner */
-.btn {
-    background-color: #89c152;
-    color: white;
-    padding: 10px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-    display: inline-block;
-}
-
-.btn:hover {
-    background-color: #72a641;
-}
-
-/* --- SEÇÃO DOS PILARES (CARDS) --- */
-.conteudo {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.subtitulo {
-    color: #666;
+.subtitulo-secao {
+    color: #555;
     margin-bottom: 40px;
 }
 
-/* Organiza os cartões um ao lado do outro */
-.cards {
+.grid-detalhes {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* Se a tela for pequena, joga o cartão para baixo */
-}
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    flex: 1;
-    min-width: 250px;
-    border-top: 5px solid #1b4d3e; /* Detalhe verde no topo do cartão */
+    gap: 30px;
+    flex-wrap: wrap;
     text-align: left;
+    margin-top: 30px;
 }
 
-.card h3 {
-    margin-bottom: 15px;
+.detalhe-item {
+    flex: 1;
+    min-width: 280px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.detalhe-item h3 {
     color: #1b4d3e;
+    margin-bottom: 10px;
 }
 
-/* --- SEÇÃO TECNOLOGIA --- */
-.tech-secao {
-    background-color: #e2efe0; /* Fundo verde bem claro */
-    padding: 60px 0;
-    text-align: center;
+.autor {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #89c152;
 }
-
-.tech-secao h2 {
-    color: #1b4d3e;
-    margin-bottom: 20px;
-}
-
-.tech-secao p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
-/* --- RODAPÉ --- */
-footer {
-    background-color: #1b4d3e;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 40px;
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin-bottom: 5px;
-}
-
-/* --- RESPONSIVIDADE (CELULAR) --- */
